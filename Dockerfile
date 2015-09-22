@@ -3,6 +3,7 @@ FROM debian:wheezy
 MAINTAINER mickael.canevet@camptocamp.com
 
 ENV PUPPET_AGENT_VERSION 1.2.4-1wheezy
+ENV PATH=/opt/puppetlabs/bin:$PATH
 
 RUN apt-get update \
   && apt-get install -y curl \
