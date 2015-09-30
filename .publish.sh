@@ -4,7 +4,7 @@ if ([ "$TRAVIS_BRANCH" == "master" ] || [ ! -z "$TRAVIS_TAG" ]) && \
   echo "Deploying image to docker hub"
   # Setup login
   openssl aes-256-cbc -K $encrypted_7cc4e6238d18_key -iv $encrypted_7cc4e6238d18_iv -in .dockercfg.enc -out ~/.dockercfg -d
-  docker push "camptocamp/docker-agent:${TRAVIS_TAG}"
+  docker push "camptocamp/puppet-agent:${TRAVIS_TAG}"
 else
   echo "Not deploying image"
 fi
