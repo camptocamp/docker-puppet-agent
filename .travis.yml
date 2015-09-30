@@ -4,5 +4,6 @@ sudo: required
 services: docker
 cache: bundler
 script:
-  - docker build .
+  - docker build -t test .
+  - docker run --rf -ti test true
   - bundle exec rspec -fd
