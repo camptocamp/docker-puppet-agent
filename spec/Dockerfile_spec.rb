@@ -8,6 +8,7 @@ describe "Dockerfile" do
     set :os, family: :debian
     set :backend, :docker
     set :docker_image, image.id
+    set :docker_container_create_options, { "Privileged" => true }
   end
 
   it "installs required packages" do
