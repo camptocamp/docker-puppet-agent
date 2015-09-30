@@ -1,5 +1,6 @@
 ---
 language: ruby
-sudo: false
+sudo: required
+services: docker
 cache: bundler
-script: "bundle exec rspec -fd"
+script: sudo service docker restart; sleep 10 && bundle exec rspec -fd
