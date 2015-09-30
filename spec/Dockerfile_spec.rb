@@ -11,7 +11,7 @@ describe "Dockerfile" do
     set :docker_container_create_options, { "Privileged" => true }
   end
 
-  it "installs required packages" do
-    expect(package("puppet-agent")).to be_installed
+  describe package("puppet-agent") do
+    it { is_expected.to be_installed }
   end
 end
