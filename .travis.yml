@@ -3,4 +3,6 @@ language: ruby
 sudo: required
 services: docker
 cache: bundler
-script: sudo service docker restart; sleep 10 && bundle exec rspec -fd
+script:
+  - docker build .
+  - sudo service docker restart; sleep 10 && bundle exec rspec -fd
