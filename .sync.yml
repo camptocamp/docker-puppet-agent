@@ -1,5 +1,4 @@
 ---
 :global:
   docker_image_name: 'puppet-agent'
-
-
+  travis_key_id: '7cc4e6238d18'
