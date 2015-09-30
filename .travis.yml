@@ -5,5 +5,4 @@ services: docker
 cache: bundler
 script:
   - docker build -t test .
-  - docker run --privileged --rm -ti test true
   - bundle exec rspec -fd
