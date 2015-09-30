@@ -1,0 +1,5 @@
+---
+:global:
+  docker_image_name: 'puppet-agent'
+
+
