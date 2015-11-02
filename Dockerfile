@@ -2,13 +2,14 @@ FROM debian:jessie
 
 MAINTAINER mickael.canevet@camptocamp.com
 
-ENV PUPPET_AGENT_VERSION 1.2.6-1jessie
+ENV RELEASE=jessie
+ENV PUPPET_AGENT_VERSION 1.2.7-1${RELEASE}
 ENV PATH=/opt/puppetlabs/bin:$PATH
 
 RUN apt-get update \
   && apt-get install -y curl locales-all \
-  && curl -O http://apt.puppetlabs.com/puppetlabs-release-pc1-jessie.deb \
-  && dpkg -i puppetlabs-release-pc1-jessie.deb \
+  && curl -O http://apt.puppetlabs.com/puppetlabs-release-pc1-${RELEASE}.deb \
+  && dpkg -i puppetlabs-release-pc1-${RELEASE}.deb \
   && rm -rf /var/lib/apt/lists/*
 
 ENV LANGUAGE=en_US.UTF-8
