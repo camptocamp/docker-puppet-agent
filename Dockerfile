@@ -3,7 +3,7 @@ FROM debian:wheezy
 MAINTAINER mickael.canevet@camptocamp.com
 
 ENV RELEASE=wheezy
-ENV PUPPET_AGENT_VERSION 1.2.7-1${RELEASE}
+ENV PUPPET_AGENT_VERSION 1.3.0-1${RELEASE}
 ENV PATH=/opt/puppetlabs/bin:$PATH
 
 RUN apt-get update \
